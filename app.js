@@ -19,8 +19,16 @@ app.set('view engine', 'handlebars');
 // ROUTES
 // --------------------
 
+// Mock array of movies
+let reviews = [
+    { title: 'Great movie', movieTitle: 'Batman II'},
+    { title: 'Awesome Movie', movieTitle: 'Titanic'},
+]
+
+// --------------------
+// INDEX
 app.get('/', (req, res) => {
-    res.render('home', { msg: 'Handlebars are coool!' });
+    res.render('reviews-index', { reviews: reviews })
 })
 
 // --------------------
