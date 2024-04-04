@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/rotten-potatoes', { useNewUrlParser: true });
+
 // App Setup
 const exhbs = require('express-handlebars');
 const Handlebars = require('handlebars');
